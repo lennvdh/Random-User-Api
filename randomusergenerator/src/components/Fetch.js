@@ -12,10 +12,25 @@ margin-left: 690px;
 margin-top: 100px;
 border-radius: 50%;
 border: 8px solid white;
+z-index: 1;
+position: relative;
 `
 
 const H4 = styled.h4`
-margin-left: 100px;
+margin-left: 50px;
+`
+
+const Div = styled.div`
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 530px;
+    height: 790px;
+    width: 400px;
+    background-color: #1EA3C2;
+    padding: 20px;
+    z-index: -6;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 `
 
 export default function Fetch() {
@@ -78,22 +93,24 @@ export default function Fetch() {
 
     return(
         <div>
-            <ProfilePic src={profilepicture} alt={firstname}></ProfilePic>            
-            <H1>{firstname} {lastname}</H1>
-            <H4>Email: {email}</H4>
-            <H4>Geboorte datum: {birthday.slice(0, 10)}</H4>
-            <H4>Leeftijd: {age}</H4>
-            <H4>Gender: {gender}</H4>
-            <H4>Gsm: {gsm}</H4>
-            <H4>Tel: {phone}</H4>
-            <H4>Nationaliteit: {nationaliteit}</H4>
-            <H4>Registered: {registered.slice(0,10)}</H4>
-            <H4>Stad: {city}</H4>
-            <H4>Land: {country}</H4>
-            <H4>Postcode: {postcode}</H4>
-            <H4>Straat naam: {streetname}</H4>
-            <H4>Huis Numer: {huisnumer}</H4>
-            <H4>UserName: {username}</H4>
+            <ProfilePic src={profilepicture} alt={firstname}></ProfilePic>
+            <Div>
+                <H1>{firstname} {lastname}</H1>
+                <H4>Email: {email}</H4>
+                <H4>Geboorte datum: {birthday.slice(0, 10)}</H4>
+                <H4>Leeftijd: {age}</H4>
+                <H4>Gender: {gender}</H4>
+                <H4>Gsm: {gsm}</H4>
+                <H4>Tel: {phone}</H4>
+                <H4>Nationaliteit: {nationaliteit}</H4>
+                <H4>Registered: {registered.slice(0,10)}</H4>
+                <H4>Stad: {city}</H4>
+                <H4>Land: {country}</H4>
+                <H4>Postcode: {postcode}</H4>
+                <H4>Straat naam: {streetname}</H4>
+                <H4>Huis Numer: {huisnumer}</H4>
+                <H4>UserName: {username}</H4>
+            </Div>             
         </div>
     )
 }
